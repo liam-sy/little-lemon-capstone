@@ -3,7 +3,8 @@ import * as React from "react"
 import Button from "./Button";
 
 const Card = ({ title, price, description, imageSrc, type }) => {
-    if (type == "special") {
+
+    if (type === "special") {
         return (
             <VStack
             className="special-card">
@@ -16,15 +17,34 @@ const Card = ({ title, price, description, imageSrc, type }) => {
                 <Button className="card-button" buttonLink={'/'} buttonText={"Order a Delivery!"} />
             </VStack>
         );
-    } else if (type == "testimony") {
+    } else if (type === "testimony") {
         return (
             <VStack
             className="testimonial-card">
-                <Text className="card-price">{price}</Text>
-                <div id="card-img-container">
-                  <Image src={imageSrc}/>
+                <Text className="card-price">
+                    {[...Array(5)].map((star, index) => {
+                        const currentRating = index + 1;
+
+                        return (
+                            <span
+                            key={index}
+                            className="star"
+                            style={{
+                                color:
+                                currentRating <= price ? "#ffc107" : "#e4e5e9"
+                            }}
+                            >
+                            &#9733;
+                            </span>
+                        );
+                    })}
+                </Text>
+                <div className="card-top">
+                    <div className="card-top-img">
+                        <Image id='card-top-img' src={imageSrc}/>
+                    </div>
+                  <Heading size="md">{title}</Heading>
                 </div>
-                <Heading size="md">{title}</Heading>
                 <Text fontSize="md" className="card-text">{description}</Text>
                 <Button className="card-button" buttonLink={'/'} buttonText={"Order a Delivery!"} />
             </VStack>

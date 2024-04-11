@@ -1,23 +1,195 @@
+/******************* UNIVERSAL *******************/
+
+html *
+{
+  font-family: "Khula";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Martel";
+}
+
+
+
+/******************* HEADER *******************/
+
 .header-wrapper {
   background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
 }
+
+.header-wrapper img {
+  height: 100%;
+  width: 15vw;
+  max-width: 265px;
+}
+
+.nav-wrapper ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-wrapper li {
+  display: inline;
+  margin: 10px;
+}
+
+/******************* BANNER *******************/
 
 .banner-wrapper {
   background-color: lightblue;
+  width: 80vw;
+  min-height: 30vh;
+  max-height: 50vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 70px;
+  grid-template-areas:
+    "banner-text banner-img-wrapper"
+    "banner-text banner-img-wrapper";
 }
 
+.banner-img-wrapper {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+/******************* SPECIALS *******************/
+
 .specials-wrapper {
+  width: 80vw;
+  margin: auto;
   background-color: blue;
 }
 
+.specials-header {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.specials-header a {
+  margin: auto 0px auto 0px;
+}
+
+.specials-cards-wrapper {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 0px 40px;
+  grid-template-areas:
+    "specials-card specials-card specials-card";
+}
+
+.special-card {
+  width: 100%;
+}
+
+.special-card img {
+  width: 100%;
+}
+
+
+/******************* TESTIMONIALS *******************/
+
 .testimonials-wrapper {
+  width: 80vw;
+  margin: auto;
   background-color: lightblue;
 }
+
+.testimonials-header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonials-card-wrapper {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 0px 30px;
+  grid-template-areas:
+    "testimonials-card testimonials-card testimonials-card testimonials-card";
+}
+
+.testimonial-card {
+  width: 100%;
+  background-color: white;
+}
+
+.testimonial-card img {
+  width: 100%;
+}
+
+.card-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-top h2 {
+  font-size: 1.2rem;
+}
+
+.card-top-img {
+  width: 50%;
+  height: 100%;
+}
+
+.card-top-img img {
+  object-fit: cover;
+}
+
+/******************* ABOUT *******************/
 
 .about-wrapper {
   background-color: blue;
+  width: 80vw;
+  min-height: 30vh;
+  max-height: 50vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 70px;
+  grid-template-areas:
+    "about-text about-img-wrapper"
+    "about-text about-img-wrapper";
 }
 
+.about-img-wrapper {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+/******************* FOOTER *******************/
+
 .footer-wrapper {
+  padding: 0% 5% 0% 5%;
   background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
 }

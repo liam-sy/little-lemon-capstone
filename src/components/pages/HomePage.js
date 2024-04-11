@@ -8,15 +8,14 @@ import About from '../About.js';
 
 const HomePage = () => {
     return (
-        <>
-        <Header />
-        <Banner />
-        <Specials />
-        <Testimonials />
-        <About />
-        <Footer />
-
-        </>
+        <div className="site-wrapper">
+            <Header />
+            <Banner />
+            <Specials />
+            <Testimonials />
+            <About />
+            <Footer />
+        </div>
     )
 }
 

@@ -8,7 +8,9 @@ const About = (props) => {
                 <h4>Punxsutawney</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <img src={require('../images/salmon-hero.png')} alt="salmon dish"/>
+            <div className="about-img-wrapper">
+                <img src={require('../images/salmon-hero.png')} alt="salmon dish"/>
+            </div>
         </div>
     );
 };

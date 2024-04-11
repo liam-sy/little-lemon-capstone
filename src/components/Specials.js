@@ -28,11 +28,14 @@ const Specials = (props) => {
     return (
         <>
         <div className="specials-wrapper">
-            <h3>Specials</h3>
-            <Button buttonLink={"/"} buttonText={"Online Menu"}/>
-            <div className="specials-cards">
+            <div className="specials-header">
+                <h3>Specials</h3>
+                <Button buttonLink={"/"} buttonText={"Online Menu"}/>
+            </div>
+            <div className="specials-cards-wrapper">
             {specials.map((special) => (
                     <Card
+                        className="specials-card"
                         key={special.name}
                         title={special.name}
                         price={special.price}
